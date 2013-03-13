@@ -48,5 +48,6 @@ public class MainActivity extends Activity {
     {
     	if (player.isPlaying())
     		player.stop();
+    	super.onPause();
     }
 }
