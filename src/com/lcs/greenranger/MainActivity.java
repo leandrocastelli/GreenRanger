@@ -50,4 +50,5 @@ public class MainActivity extends Activity {
     		player.stop();
     	super.onPause();
     }
+    
 }
