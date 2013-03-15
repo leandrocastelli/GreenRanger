@@ -16,14 +16,14 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait"  >
-            <intent-filter>
+            <intent-filter>[]
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <receiver
-            android:name="DaggerWidgetProvider">
+            android:name="com.lcs.greenranger.widget.DaggerWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>

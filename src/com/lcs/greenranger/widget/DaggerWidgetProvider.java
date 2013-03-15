@@ -1,28 +1,39 @@
 package com.lcs.greenranger.widget;
 
-import com.lcs.greenranger.*;
-
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.widget.RemoteViews;
+
+import com.lcs.greenranger.R;
 
 
 
 public class DaggerWidgetProvider extends AppWidgetProvider{
 
 	@Override
-	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds)
+	public void onUpdate(Context context, AppWidgetManager appWidgetManager,
+			int[] appWidgetIds)
 	{
-		final int N = appWidgetIds.length;
-		
-		for (int i=0; i<N; i++)
-		{
-			int appWidgetId = appWidgetIds[i];
-			
-			RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
-			//views.setOnClickPendingIntent(viewId, pendingIntent)
+		ComponentName thisWidget = new ComponentName(context,
+				DaggerWidgetProvider.class);
+		int[] allWidgetIds = appWidgetManager.getAppWidgetIds(thisWidget);
+		for (int widgetId : allWidgetIds) {
+			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
+					R.layout.widget_layout);
+
+			Intent intent = new Intent(context,PlayService.class);
+
+			PendingIntent pendingIntent = PendingIntent.getBroadcast(context,
+					0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+			remoteViews.setOnClickPendingIntent(R.id.dagger_widget, pendingIntent);
+			appWidgetManager.updateAppWidget(widgetId, remoteViews);
 		}
+
 	}
+		
 	
 }
