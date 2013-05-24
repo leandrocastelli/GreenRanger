@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lcs.greenranger"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -24,7 +24,9 @@
         </activity>
         
         <receiver
-            android:name="com.lcs.greenranger.widget.DaggerWidgetProvider">
+            android:name="com.lcs.greenranger.widget.DaggerWidgetProvider"
+            android:label="@string/widget_label"
+            android:icon="@drawable/ic_launcher_widget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>

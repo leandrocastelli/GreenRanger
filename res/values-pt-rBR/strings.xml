@@ -1,10 +1,10 @@
 <resources>
 
-    <string name="app_name">Green Ranger</string>
+    <string name="app_name">Ranger Verde</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">Green Ranger</string>
+    <string name="title_activity_main">Ranger Verde</string>
     <string name="desc">Only Description</string>
-    <string name="widget_label">Green Ranger Widget</string>
+    <string name="widget_label">Ranger Verde Widget</string>
 
 </resources>
