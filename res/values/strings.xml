@@ -2,9 +2,10 @@
 
     <string name="app_name">Green Ranger</string>
     <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
+    <string name="menu_share">Share</string>
     <string name="title_activity_main">Green Ranger</string>
     <string name="desc">Only Description</string>
     <string name="widget_label">Green Ranger Widget</string>
-
+	<string name="share_sound">Share Sound</string>
+	<string name="share_error">Send Failed</string>
 </resources>

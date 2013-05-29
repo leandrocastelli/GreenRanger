@@ -5,18 +5,22 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
+import android.widget.Toast;
 
+import com.lcs.greenranger.filemanager.FileManager;
 import com.lcs.greenranger.service.MediaService;
 import com.lcs.greenranger.service.MediaService.LocalBinder;
 import com.lcs.greenranger.service.SoundPlayer;
@@ -53,7 +57,7 @@ public class MainActivity extends Activity implements ServiceConnection{
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		//getMenuInflater().inflate(R.menu.activity_main, menu);
+		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
 	@Override
@@ -94,5 +98,23 @@ public class MainActivity extends Activity implements ServiceConnection{
 		};
 	};
 
-
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) { 
+		switch(item.getItemId()){
+		case R.id.menu_share: {
+			String path = FileManager.getInstance().getFilePath(this);
+			if(path!=null) {
+				Intent share = new Intent(Intent.ACTION_SEND);
+	        	share.setType("audio/*");
+	        	share.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///" + path));
+	        	startActivity(Intent.createChooser(share, getString(R.string.share_sound)));
+			}
+			else {
+				Toast.makeText(this, getString(R.string.share_error), 4).show();
+			}
+		}
+		
+		}
+		return true;
+	}
 }
