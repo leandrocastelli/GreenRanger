@@ -3,4 +3,8 @@
         android:title="@string/menu_share"
         android:orderInCategory="100"
         android:showAsAction="never" />
+    <item android:id="@+id/menu_setas"
+        android:title="@string/menu_setas"
+        android:orderInCategory="200"
+        android:showAsAction="never" />
 </menu>

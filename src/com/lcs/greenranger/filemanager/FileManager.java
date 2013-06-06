@@ -7,97 +7,148 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 
 import com.lcs.greenranger.R;
 
 public class FileManager {
 
+	public enum Props{
+		RINGTONE,
+		NOTIFICATION,
+		ALARM,
+		SEND
+	};
 	private static final String TAG = "FileManager";
 	private static FileManager instance;
 	private FileManager(){};
-	private final String filename = "green.mp3";
-	
+	private final String filename = "/green.mp3";
+
 	public static FileManager getInstance(){
 		if(instance==null)
 			instance = new FileManager();
 		return instance;
 	}
-	
-	private String copyFile(Context ctx){
-		String path = null;
-		InputStream in;
+
+
+
+	public String copyFile(Context ctx, Props where, InputStream in) {
+
 		OutputStream out;
-		in = ctx.getResources().openRawResource(R.raw.green);
-		String state = Environment.getExternalStorageState();
-		
-		try{
-			if(Environment.MEDIA_MOUNTED.equals(state)){
-				File temp = new File(Environment.getExternalStorageDirectory()+"/GreenRanger/");
-				if(!temp.exists())
-					temp.mkdir();
-				
-				path = temp.getPath()+"/"+filename;
-				
-			}
-			else {
-				path ="/data/data/"+ctx.getPackageName()+"/"+filename;
-			}
-			out = new FileOutputStream(path);
-			byte[] buffer = new byte[1024];
-	        int read;
-	        while ((read = in.read(buffer)) != -1) {
-	            out.write(buffer, 0, read);
-	        }
-	        
-	        in.close();
-			in = null;
-			out.flush();
-			out.close();
-		}
-		catch (FileNotFoundException ex)
+
+		String path = whereTo(ctx,where);
+		if(!fileExists(ctx,path))
 		{
-			Log.e(TAG, ex.getMessage());
-			return null;
-		}
-		catch (IOException e) {
-			Log.e(TAG, e.getMessage());
-			return null;
-		}
-		
-		return path;
-	}
-	public String getFilePath(Context ctx ){
-		String path = fileExists(ctx);
-		if(path!=null)
-		{
-			return path;
-		}
-		else {
-			path = copyFile(ctx);
+
+			try{
+				//			File file = new File(path);
+				//			file.mkdir();
+				out = new FileOutputStream(path);
+				byte[] buffer = new byte[1024];
+				int read;
+				while ((read = in.read(buffer)) != -1) {
+					out.write(buffer, 0, read);
+				}
+
+				in.close();
+				in = null;
+				out.flush();
+				out.close();
+			}
+			catch (FileNotFoundException ex)
+			{
+				Log.e(TAG, ex.getMessage());
+				return null;
+			}
+			catch (IOException e) {
+				Log.e(TAG, e.getMessage());
+				return null;
+			}
 		}
 		return path;
 	}
-	
-	private String fileExists(Context ctx) {
-		File file ;
+
+	private String whereTo(Context ctx,Props where) {
+
 		String state = Environment.getExternalStorageState();
-		String path;
+		String path = null;
 		if(Environment.MEDIA_MOUNTED.equals(state)){
-			path = Environment.getExternalStorageDirectory()+"/GreenRanger/"+filename;
-			
+			switch(where) {
+			case RINGTONE:
+				path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RINGTONES)+filename;
+				break;
+			case NOTIFICATION:
+				path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_NOTIFICATIONS)+filename;
+				break;
+			case ALARM:
+				path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_ALARMS)+filename;
+				break;
+			case SEND:
+				path = ctx.getExternalFilesDir(null).getAbsolutePath()+filename;
+				break;
+			}
+
+
 		}
 		else {
-			path = "/data/data/"+ctx.getPackageName()+"/"+filename;
+			path = ctx.getFilesDir().getAbsolutePath()+where.name()+filename;
+
 		}
+
+		return path;
+
+	}
+
+	private boolean fileExists(Context ctx,String path) {
+		File file ;
+
 		file = new File(path);
-		if(file.exists()){
-			return path;
+		return file.exists();
+	}
+
+	public boolean setAs (String path,Props prop, Context ctx) {
+
+		
+		File file = new File(path);
+		ContentValues values = new ContentValues();
+		values.put(MediaStore.MediaColumns.DATA, file.getAbsolutePath());
+		values.put(MediaStore.MediaColumns.TITLE, "Green Ranger");
+		values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/mp3");
+		switch(prop){
+		case RINGTONE:
+			values.put(MediaStore.Audio.Media.IS_RINGTONE, true);
+			break;
+		case NOTIFICATION:
+			values.put(MediaStore.Audio.Media.IS_NOTIFICATION, true);
+			break;
+		case ALARM:
+			values.put(MediaStore.Audio.Media.IS_ALARM, true );
+			break;
 		}
-		else {
-			return null;
+
+		Uri uri = MediaStore.Audio.Media.getContentUriForPath(file.getAbsolutePath());
+		ctx.getContentResolver().delete(uri, MediaStore.MediaColumns.DATA + "=\"" + file.getAbsolutePath() + "\"", null);
+		Uri newUri = ctx.getContentResolver().insert(uri, values);
+
+
+		switch(prop){
+		case RINGTONE:
+			RingtoneManager.setActualDefaultRingtoneUri(ctx, RingtoneManager.TYPE_RINGTONE, newUri);
+			break;
+		case NOTIFICATION:
+			RingtoneManager.setActualDefaultRingtoneUri(ctx, RingtoneManager.TYPE_NOTIFICATION, newUri);
+			break;
+		case ALARM:
+			RingtoneManager.setActualDefaultRingtoneUri(ctx, RingtoneManager.TYPE_ALARM, newUri);
+			break;
 		}
+		return true;
+
 	}
 }

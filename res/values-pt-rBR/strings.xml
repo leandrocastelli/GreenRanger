@@ -1,12 +1,18 @@
 <resources>
 
     <string name="app_name">Ranger Verde</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="cancel">Cancelar</string>
     <string name="menu_share">Compartilhar</string>
+    <string name="menu_setas">Configurar como&#8230;</string>
     <string name="title_activity_main">Ranger Verde</string>
     <string name="desc">Only Description</string>
     <string name="widget_label">Ranger Verde Widget</string>
     <string name="share_sound">Compartilhar Audio</string>
     <string name="share_error">Envio Falhou</string>
-
+	<string name="dialog_set_title">Configurar como</string>
+	<string name="ringtone">Toque de chamada</string>
+	<string name="notification">Notificação</string>
+	<string name="alarm">Alarme</string>
+	<string name="set_success">" configurado(a) corretamente"</string>
+	<string name="set_fail">" não foi configurado(a)"</string>
 </resources>
