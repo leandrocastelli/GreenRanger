@@ -91,14 +91,17 @@ public class FileManager {
 				break;
 			case SEND:
 				path = ctx.getExternalFilesDir(null).getAbsolutePath()+filename;
+				
 				break;
 			}
 
 
 		}
 		else {
-			path = ctx.getFilesDir().getAbsolutePath()+where.name()+filename;
-
+			path = ctx.getFilesDir().getAbsolutePath()+"/"+where.name()+filename;
+			File createDir = new File(ctx.getFilesDir().getAbsolutePath()+"/"+where.name());
+			if(!createDir.exists())
+				createDir.mkdirs();
 		}
 
 		return path;
