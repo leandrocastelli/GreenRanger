@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">Ranger Verde</string>
+    <string name="cancel">Cancelar</string>
+    <string name="menu_share">Compartir</string>
+    <string name="menu_setas">Establecer como&#8230;</string>
+    <string name="title_activity_main">Ranger Verde</string>
+    
+    <string name="widget_label">Ranger Verde Widget</string>
+	<string name="share_sound">Compartir Sonido</string>
+	<string name="share_error">Enviar fracasado</string>
+	<string name="dialog_set_title">Establecer sonido como</string>
+	<string name="ringtone">Tono</string>
+	<string name="notification">Notificación</string>
+	<string name="alarm">Alarma</string>
+	<string name="set_success">" éxito configuración"</string>
+	<string name="set_fail">" aprovecha configuración"</string>
+</resources>
