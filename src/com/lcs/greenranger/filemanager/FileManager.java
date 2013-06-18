@@ -77,7 +77,7 @@ public class FileManager {
 	private String whereTo(Context ctx,Props where) {
 
 		String state = Environment.getExternalStorageState();
-		String path = null;
+		String path = "";
 		if(Environment.MEDIA_MOUNTED.equals(state)){
 			switch(where) {
 			case RINGTONE:
@@ -99,11 +99,12 @@ public class FileManager {
 		}
 		else {
 			path = ctx.getFilesDir().getAbsolutePath()+"/"+where.name()+filename;
-			File createDir = new File(ctx.getFilesDir().getAbsolutePath()+"/"+where.name());
-			if(!createDir.exists())
-				createDir.mkdirs();
-		}
 
+			
+		}
+		File createDir = new File(path.substring(0, path.length()-filename.length()));
+		if(!createDir.exists())
+			createDir.mkdirs();
 		return path;
 
 	}

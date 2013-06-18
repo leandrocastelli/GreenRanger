@@ -46,12 +46,15 @@ public class MainActivity extends SherlockFragmentActivity implements ServiceCon
 
 	private SoundPlayer soundPlayer;
 	private final int START_PLAY = 1;
-<<<<<<< Updated upstream
-=======
+
 	private com.actionbarsherlock.widget.ShareActionProvider shareActionProvider;
 	public static Map<Integer,Props> map = new HashMap<Integer, FileManager.Props>();
 	
->>>>>>> Stashed changes
+
+	
+	public static Map<Integer,Props> map = new HashMap<Integer, FileManager.Props>();
+	
+
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -70,13 +73,13 @@ public class MainActivity extends SherlockFragmentActivity implements ServiceCon
 		AdRequest adRequest = new AdRequest();
 		AppRater.app_launched(this);
 		AdView adView = (AdView)findViewById(R.id.ad);
-<<<<<<< Updated upstream
+
 //		adRequest.addTestDevice("89E1AAF3C3FB0B29BA39B0E77040BDEF");
-=======
-	//	adRequest.addTestDevice("89E1AAF3C3FB0B29BA39B0E77040BDEF");
+
+
 		
 		//adRequest.addTestDevice(AdRequest.TEST_EMULATOR);
->>>>>>> Stashed changes
+
 //		Map<String, Object> extras = new HashMap<String, Object>();
 //		extras.put("color_bg", "000000");
 //		adRequest.setExtras(extras);
@@ -98,6 +101,9 @@ public class MainActivity extends SherlockFragmentActivity implements ServiceCon
 			}
 		});
 		
+		map.put(0,Props.RINGTONE);
+		map.put(1,Props.NOTIFICATION);
+		map.put(2,Props.ALARM);
 
 	}
 	@Override
@@ -208,7 +214,9 @@ public class MainActivity extends SherlockFragmentActivity implements ServiceCon
 			listString.add(getString(R.string.ringtone));
 			listString.add(getString(R.string.notification));
 			listString.add(getString(R.string.alarm));
-
+			
+			
+			
 			final ArrayAdapter<String>  adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, android.R.id.text1, listString);
 			builder.setAdapter(adapter, new DialogInterface.OnClickListener() {
 
@@ -216,22 +224,13 @@ public class MainActivity extends SherlockFragmentActivity implements ServiceCon
 					
 						String path;
 						boolean result = false;
-						switch(arg1) {
-						case 0:
-							path = FileManager.getInstance().copyFile(adapter.getContext(), Props.RINGTONE, in);
-							result = FileManager.getInstance().setAs(path,Props.RINGTONE, adapter.getContext());
-											
-							break;
-						case 1:
-							path = FileManager.getInstance().copyFile(adapter.getContext(), Props.NOTIFICATION, in);
-							result = FileManager.getInstance().setAs(path,Props.NOTIFICATION, adapter.getContext());
-							break;
-						case 2:
-							path = FileManager.getInstance().copyFile(adapter.getContext(), Props.ALARM, in);
-							result = FileManager.getInstance().setAs(path,Props.ALARM, adapter.getContext());
-							break;
-						
+												
+						Props selection = map.get(arg1);
+						path = FileManager.getInstance().copyFile(adapter.getContext(), selection, in);
+						if((path.length()>0)) { //API Lvl 8 doesnt have isEmpty
+							result = FileManager.getInstance().setAs(path,selection, adapter.getContext());
 						}
+						
 						if(result) {
 							Toast.makeText(adapter.getContext(), adapter.getItem(arg1)+getString(R.string.set_success),Toast.LENGTH_SHORT).show();
 						}
