@@ -51,10 +51,6 @@ public class MainActivity extends SherlockFragmentActivity implements ServiceCon
 	public static Map<Integer,Props> map = new HashMap<Integer, FileManager.Props>();
 	
 
-	
-	public static Map<Integer,Props> map = new HashMap<Integer, FileManager.Props>();
-	
-
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
