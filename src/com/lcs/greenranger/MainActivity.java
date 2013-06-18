@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
@@ -20,17 +19,19 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.Toast;
 
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.widget.ShareActionProvider;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 import com.lcs.greenranger.filemanager.FileManager;
@@ -38,18 +39,25 @@ import com.lcs.greenranger.filemanager.FileManager.Props;
 import com.lcs.greenranger.service.MediaService;
 import com.lcs.greenranger.service.MediaService.LocalBinder;
 import com.lcs.greenranger.service.SoundPlayer;
+import com.lcs.greenranger.util.AppRater;
 
-public class MainActivity extends Activity implements ServiceConnection{
+public class MainActivity extends SherlockFragmentActivity implements ServiceConnection{
 
 
 	private SoundPlayer soundPlayer;
 	private final int START_PLAY = 1;
+<<<<<<< Updated upstream
+=======
+	private com.actionbarsherlock.widget.ShareActionProvider shareActionProvider;
+	public static Map<Integer,Props> map = new HashMap<Integer, FileManager.Props>();
+	
+>>>>>>> Stashed changes
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		bindService(new Intent(this,MediaService.class), this, Context.BIND_AUTO_CREATE);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_main);
@@ -60,9 +68,15 @@ public class MainActivity extends Activity implements ServiceConnection{
 		img.setScaleType(ScaleType.FIT_XY);
 
 		AdRequest adRequest = new AdRequest();
-		
+		AppRater.app_launched(this);
 		AdView adView = (AdView)findViewById(R.id.ad);
+<<<<<<< Updated upstream
 //		adRequest.addTestDevice("89E1AAF3C3FB0B29BA39B0E77040BDEF");
+=======
+	//	adRequest.addTestDevice("89E1AAF3C3FB0B29BA39B0E77040BDEF");
+		
+		//adRequest.addTestDevice(AdRequest.TEST_EMULATOR);
+>>>>>>> Stashed changes
 //		Map<String, Object> extras = new HashMap<String, Object>();
 //		extras.put("color_bg", "000000");
 //		adRequest.setExtras(extras);
@@ -93,8 +107,31 @@ public class MainActivity extends Activity implements ServiceConnection{
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_main, menu);
+		//super.onCreateOptionsMenu(menu);
+		MenuInflater mi = getSupportMenuInflater();
+		mi.inflate(R.menu.activity_main, menu);
+		MenuItem menuItem = menu.findItem(R.id.menu_share);
+		shareActionProvider =(ShareActionProvider) menuItem.getActionProvider();
+		shareActionProvider.setShareIntent(getDefaultShareIntent());
+		menuItem.setActionProvider(shareActionProvider);
 		return true;
+	}
+	
+	
+	private Intent getDefaultShareIntent() {
+		final InputStream in = getResources().openRawResource(R.raw.green);
+		String path = FileManager.getInstance().copyFile(this, Props.SEND, in);
+		if(path!=null) {
+			Intent share = new Intent(Intent.ACTION_SEND);
+			share.setType("audio/*");
+			share.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///" + path));
+			
+			return share;
+		}
+		else {
+			Toast.makeText(this, getString(R.string.share_error), Toast.LENGTH_SHORT).show();
+		}
+		return null;
 	}
 	@Override
 	public void onPause()
@@ -140,16 +177,17 @@ public class MainActivity extends Activity implements ServiceConnection{
 		switch(item.getItemId()){
 		case R.id.menu_share: {
 			
-			String path = FileManager.getInstance().copyFile(this, Props.SEND, in);
-			if(path!=null) {
-				Intent share = new Intent(Intent.ACTION_SEND);
-				share.setType("audio/*");
-				share.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///" + path));
-				startActivity(Intent.createChooser(share, getString(R.string.share_sound)));
-			}
-			else {
-				Toast.makeText(this, getString(R.string.share_error), Toast.LENGTH_SHORT).show();
-			}
+//			String path = FileManager.getInstance().copyFile(this, Props.SEND, in);
+//			if(path!=null) {
+//				Intent share = new Intent(Intent.ACTION_SEND);
+//				share.setType("audio/*");
+//				share.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///" + path));
+//				//startActivity(Intent.createChooser(share, getString(R.string.share_sound)));
+//				shareActionProvider.setShareIntent(share);
+//			}
+//			else {
+//				Toast.makeText(this, getString(R.string.share_error), Toast.LENGTH_SHORT).show();
+//			}
 		}
 		break;
 		case R.id.menu_setas: {

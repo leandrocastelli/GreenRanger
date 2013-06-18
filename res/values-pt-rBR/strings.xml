@@ -15,4 +15,8 @@
 	<string name="alarm">Alarme</string>
 	<string name="set_success">" configurado(a) corretamente"</string>
 	<string name="set_fail">" não foi configurado(a)"</string>
+	<string name="rate">"Avalie " </string>
+	<string name="remind_later">"Lembrar depois" </string>
+	<string name="no_thanks">"Não, obrigado" </string>
+	<string name="format_rate">"Se você gostou de usar o %s,por favor gaste um tempo para avalia-lo. Obrigado por sua ajuda!"</string>
 </resources>

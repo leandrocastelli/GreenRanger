@@ -1,10 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menu_share"
         android:title="@string/menu_share"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
+        android:icon="@drawable/abs__ic_menu_share_holo_dark"
+        android:orderInCategory="100"        
+        android:showAsAction="ifRoom" 
+        android:actionProviderClass="com.actionbarsherlock.widget.ShareActionProvider"
+        />
+    
     <item android:id="@+id/menu_setas"
         android:title="@string/menu_setas"
+        android:icon="@drawable/ic_action_settings"
         android:orderInCategory="200"
-        android:showAsAction="never" />
+        android:showAsAction="ifRoom" />
 </menu>
