@@ -90,7 +90,13 @@ public class FileManager {
 				path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_ALARMS)+filename;
 				break;
 			case SEND:
-				path = ctx.getExternalFilesDir(null).getAbsolutePath()+filename;
+				File externalFilesDir = ctx.getExternalFilesDir(null);
+				if (externalFilesDir != null) {
+					path = externalFilesDir.getAbsolutePath()+filename;
+				}
+				else {
+					path = ctx.getFilesDir().getAbsolutePath()+"/"+where.name()+filename;
+				}
 				
 				break;
 			}

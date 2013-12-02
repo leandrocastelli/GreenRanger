@@ -5,7 +5,7 @@
         android:icon="@drawable/ic_action_share"
         android:orderInCategory="100"        
         com.lcs.greenranger:showAsAction="always" 
-        com.lcs.greenranger:actionProviderClass="com.actionbarsherlock.widget.ShareActionProvider"
+        com.lcs.greenranger:actionProviderClass="android.support.v7.widget.ShareActionProvider"
         />
     
     <item android:id="@+id/menu_setas"

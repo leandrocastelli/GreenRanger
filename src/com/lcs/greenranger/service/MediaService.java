@@ -29,28 +29,43 @@ public class MediaService extends Service implements SoundPlayer{
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		player = MediaPlayer.create(this,R.raw.green);
-		player.setOnCompletionListener(new OnCompletionListener() {
-			
-			public void onCompletion(MediaPlayer mp) {
-				stopSelf();
-				
-			}
-		});
+		
 		
 		
 	}
 	public void startPlaying()
 	{
 		
-		if(player.isPlaying())
-		{
-			player.stop();
-			player.reset();
+		try {
+			
+			
+			if(player!= null)
+			{
+				if(player.isPlaying())
+				{
+					player.stop();
+					player.reset();
+					
+				}
+			}
 			player = MediaPlayer.create(this,R.raw.green);
-		}
-		
-	    player.start();
+			player.setOnCompletionListener(new OnCompletionListener() {
+				
+				public void onCompletion(MediaPlayer mp) {
+					stopSelf();
+					
+				}
+			});
+		    player.start();
+			}
+			catch (IllegalStateException e ){
+				player = null;
+				startPlaying();
+			}
+			catch (NullPointerException e ){
+				player = null;
+				startPlaying();
+			}
 	  
 	}
 	

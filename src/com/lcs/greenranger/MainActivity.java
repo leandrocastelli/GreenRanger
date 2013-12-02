@@ -19,6 +19,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.ShareActionProvider;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
@@ -27,11 +33,6 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.widget.ShareActionProvider;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 import com.lcs.greenranger.filemanager.FileManager;
@@ -41,13 +42,13 @@ import com.lcs.greenranger.service.MediaService.LocalBinder;
 import com.lcs.greenranger.service.SoundPlayer;
 import com.lcs.greenranger.util.AppRater;
 
-public class MainActivity extends SherlockFragmentActivity implements ServiceConnection{
+public class MainActivity extends ActionBarActivity implements ServiceConnection{
 
 
 	private SoundPlayer soundPlayer;
 	private final int START_PLAY = 1;
 
-	private com.actionbarsherlock.widget.ShareActionProvider shareActionProvider;
+	private ShareActionProvider shareActionProvider;
 	public static Map<Integer,Props> map = new HashMap<Integer, FileManager.Props>();
 	
 
@@ -110,12 +111,12 @@ public class MainActivity extends SherlockFragmentActivity implements ServiceCon
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		//super.onCreateOptionsMenu(menu);
-		MenuInflater mi = getSupportMenuInflater();
+		MenuInflater mi = getMenuInflater();
 		mi.inflate(R.menu.activity_main, menu);
 		MenuItem menuItem = menu.findItem(R.id.menu_share);
-		shareActionProvider =(ShareActionProvider) menuItem.getActionProvider();
+		shareActionProvider =(ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
 		shareActionProvider.setShareIntent(getDefaultShareIntent());
-		menuItem.setActionProvider(shareActionProvider);
+		
 		return true;
 	}
 	
