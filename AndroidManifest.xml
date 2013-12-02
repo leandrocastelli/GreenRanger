@@ -2,8 +2,8 @@
     package="com.lcs.greenranger"
 
 
-    android:versionCode="7"
-    android:versionName="2.0.1" 
+    android:versionCode="8"
+    android:versionName="2.0.2" 
     android:installLocation="preferExternal"
    	>
 
