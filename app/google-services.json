@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "425455988909",
+    "firebase_url": "https://greenranger-14ce3.firebaseio.com",
+    "project_id": "greenranger-14ce3",
+    "storage_bucket": "greenranger-14ce3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425455988909:android:f9a0510ea536d816",
+        "android_client_info": {
+          "package_name": "com.lcs.greenranger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "425455988909-1pq2m6dbdvvp1v0osp8bsq1uurhq9s44.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lcs.greenranger",
+            "certificate_hash": "F57C340B5F4BFFD13E45E3B79814C5025C376978"
+          }
+        },
+        {
+          "client_id": "425455988909-u1dnv1h69gh07hs6q8piilanfopss34u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJZaaBwu3-rrvJkzPeT_K6MZjYp7tj02k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "425455988909-u1dnv1h69gh07hs6q8piilanfopss34u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

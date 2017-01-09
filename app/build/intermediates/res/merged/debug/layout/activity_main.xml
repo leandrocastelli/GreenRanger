@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+ 
+    <ImageView
+        android:id="@+id/rangerImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/greenranger"
+        tools:context=".MainActivity" 
+        android:layout_gravity="center">
+        
+    </ImageView>
+    <com.google.android.gms.ads.AdView xmlns:googleads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        googleads:adSize="BANNER"
+        googleads:adUnitId="@string/admob_id" 
+         android:layout_gravity="bottom"/>
+
+</FrameLayout>

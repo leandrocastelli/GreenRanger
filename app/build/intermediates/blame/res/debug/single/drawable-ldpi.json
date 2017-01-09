@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher_widget_pressed.png",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher_widget_pressed.png"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher_widget.png",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher_widget.png"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_action_search.png",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\src\\main\\res\\drawable-ldpi\\ic_action_search.png"
+    }
+]

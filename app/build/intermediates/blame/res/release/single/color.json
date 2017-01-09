@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\color\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\release\\color\\abc_search_url_text_holo.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\color\\abc_search_url_text_holo.xml"
+    }
+]

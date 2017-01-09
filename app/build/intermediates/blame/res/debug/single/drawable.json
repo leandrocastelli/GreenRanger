@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_ab_holo_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_spinner_ab_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_focused.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_search_dropdown_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_search_dropdown_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_right_holo_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_textfield_searchview_right_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_ab_holo.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_tab_indicator_ab_holo.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\src\\main\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_search.png",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\src\\main\\res\\drawable\\ic_action_search.png"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_selector.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\src\\main\\res\\drawable\\img_selector.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_holo_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_textfield_searchview_holo_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_focused.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_focused.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_holo_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_textfield_searchview_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_search_dropdown_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_search_dropdown_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_right_holo_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_textfield_searchview_right_holo_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_ab_holo_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_spinner_ab_holo_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_ic_clear.xml"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher_widget_web2.png",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\src\\main\\res\\drawable\\ic_launcher_widget_web2.png"
+    },
+    {
+        "merged": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_holo_light.xml",
+        "source": "D:\\Backup\\Backup\\AndroidStudioProjects\\GreenRanger1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_ic_clear_holo_light.xml"
+    }
+]
